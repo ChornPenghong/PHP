@@ -93,22 +93,38 @@
     }
 ?>
 <p>Example 3:</p>
-$username = 'sa';
-$pass = '123';
-$cpass = '123';
-$utype ='admin';
-if(strcmp($username, 'sa')==0)
-    if(strcmp($pass, '123')==0)
-        if(strcmp($cpass, '123')==0)
-            if(strcmp($utype, 'admin'))
-                echo "Welcome to log in";
+    $username = 'sa';
+    $pass = '123';
+    $cpass = '123';
+    $utype ='admin';
+        if(strcmp($username, 'sa')==0)
+        {
+            if(strcmp($pass, '123')==0)
+            {
+                if(strcmp($cpass, '123')==0)
+                {
+                    if(strcmp($utype, 'admin'))
+                    {
+                        echo "Welcome to log in";
+                    }
+                    else
+                    {
+                        echo "Invalid User Type!";
+                    }
+                }
+                else
+                {
+                    echo "Invalid confirm password";
+                }
+            }
             else
-                echo "Invalid User Type!";
+            {
+                echo "Invalid password!";
+            }
+        }
         else
-            echo "Invalid confirm password";
-    else
-        echo "Invalid password!";
-else
-    echo "Invalid User Name!";
+        {
+            echo "Invalid User Name!";
+        }
 </body>
 </html>
